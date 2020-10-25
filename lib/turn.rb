@@ -48,6 +48,9 @@ def turn(board)
   number = gets.chomp 
   index = input_to_index(number)
   if valid_move?(board, index) == true 
-    move
+    move(board, index)
+    display_board(board)
+  else 
+    turn(board)
 end
 
